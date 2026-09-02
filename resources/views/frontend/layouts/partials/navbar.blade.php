@@ -175,7 +175,7 @@
 					<div class="dropdownmenu-wrapper custom-scrollbar">
 						<div class="dropdown-cart-header">Keranjang</div>
 
-						@if(!empty(session('auth_user')))
+						@if(!empty(session('auth_user')) && isset(session('auth_user')['pelanggan_id']))
 						@php $dataCartNya = getCart(session('auth_user')['pelanggan_id']); @endphp
 						@else
 						@php $dataCartNya = []; @endphp

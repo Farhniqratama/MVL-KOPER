@@ -252,15 +252,19 @@
 
 <!-- Brand Story Section -->
 <div class="container mt-5 mb-5 pb-5 pt-5">
-    <div class="row align-items-center">
-        <div class="col-md-6 mb-4 mb-md-0 appear-animate" data-animation-name="fadeInLeftShorter">
-            <img src="{{ asset('upload/produk/banner2.png') }}" alt="Kisah Brand" class="img-fluid rounded" style="box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
-        </div>
-        <div class="col-md-6 pl-md-5 appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200">
-            <h4 class="text-uppercase mb-2" style="color: #888; letter-spacing: 2px; font-size: 13px;">Kisah Kami</h4>
-            <h2 class="section-title mb-3" style="font-weight: 800; font-size: 2.5rem; line-height: 1.2;">MENDEFINISIKAN ULANG <br>GAYA BEPERGIAN</h2>
-            <p class="mb-4 text-muted" style="font-size: 1.1rem; line-height: 1.8;">Berawal dari frustrasi terhadap koper yang mudah rusak, kami menciptakan lini koper eksklusif yang memadukan keindahan desain minimalis dengan ketahanan maksimal. Setiap lekukan dirancang untuk mobilitas tanpa batas.</p>
-            <a href="#" class="btn btn-outline-dark btn-lg" style="border-radius: 30px; padding: 12px 35px; letter-spacing: 1px; font-weight: bold;">BACA SELENGKAPNYA</a>
+    <div class="card shadow-lg border-0 rounded-lg">
+        <div class="card-body p-4 p-md-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0 appear-animate" data-animation-name="fadeInLeftShorter">
+                    <img src="{{ asset('upload/produk/banner2.png') }}" alt="Kisah Brand" class="img-fluid rounded" style="box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                </div>
+                <div class="col-md-6 pl-md-5 appear-animate" data-animation-name="fadeInRightShorter" data-animation-delay="200">
+                    <h4 class="text-uppercase mb-2" style="color: #888; letter-spacing: 2px; font-size: 13px;">Kisah Kami</h4>
+                    <h2 class="section-title mb-3" style="font-weight: 800; font-size: 2.5rem; line-height: 1.2;">MENDEFINISIKAN ULANG <br>GAYA BEPERGIAN</h2>
+                    <p class="mb-4 text-muted" style="font-size: 1.1rem; line-height: 1.8;">Berawal dari frustrasi terhadap koper yang mudah rusak, kami menciptakan lini koper eksklusif yang memadukan keindahan desain minimalis dengan ketahanan maksimal. Setiap lekukan dirancang untuk mobilitas tanpa batas.</p>
+                    <a href="#" class="btn btn-outline-dark btn-lg" style="border-radius: 30px; padding: 12px 35px; letter-spacing: 1px; font-weight: bold;">BACA SELENGKAPNYA</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

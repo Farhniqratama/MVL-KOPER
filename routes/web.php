@@ -20,6 +20,7 @@ use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\TokoController;
 use App\Http\Controllers\BotolController;
 use App\Http\Controllers\BannerController;
+use App\Http\Controllers\DataScienceController;
 
 use App\Http\Controllers\Frontend\HomesController;
 use App\Http\Controllers\Frontend\AuthController;
@@ -179,7 +180,17 @@ Route::middleware(['authlogedin'])->group(function(){
     Route::post('/update-transaksi/{id}', [TransaksiController::class, 'updateTransaksi']);
     Route::post('/update-transaksi-retur/{id}', [TransaksiController::class, 'updateTransaksiRetur']);
 
+    // DATA SCIENCE & ANALYTICS (ADMIN)
+    Route::get('/data-science', [DataScienceController::class, 'index']);
+    Route::get('/data-science/segmentation', [DataScienceController::class, 'segmentation']);
+    Route::get('/data-science/forecasting', [DataScienceController::class, 'forecasting']);
+    Route::get('/data-science/sentiment', [DataScienceController::class, 'sentiment']);
+    Route::get('/data-science/recommender', [DataScienceController::class, 'recommender']);
+
 });
+
+// Public AI Recommendation API
+Route::get('/api/data-science/recommendations/{id}', [DataScienceController::class, 'apiRecommendations']);
 
 // Static Footer Pages
 Route::get('/tentang-kami', function() { return view('frontend.pages.tentang-kami'); });

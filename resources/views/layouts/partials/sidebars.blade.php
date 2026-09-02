@@ -96,6 +96,39 @@
         </a>
     </li>
 
+    <!-- DATA SCIENCE SECTION -->
+    <li class="menu-header small text-uppercase"><span class="menu-header-text" style="color: #696cff; font-weight: bold;"><i class="bx bx-brain me-1"></i> DATA SCIENCE & AI (80%)</span></li>
+    <li class="menu-item <?php if(request()->is('data-science')){echo 'active';} ?>">
+        <a href="{{ URL::to('/data-science') }}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-network-chart text-primary"></i>
+            <div class="text-truncate">AI Command Center</div>
+        </a>
+    </li>
+    <li class="menu-item <?php if(request()->is('data-science/segmentation')){echo 'active';} ?>">
+        <a href="{{ URL::to('/data-science/segmentation') }}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-group text-success"></i>
+            <div class="text-truncate">Segmentasi RFM (K-Means)</div>
+        </a>
+    </li>
+    <li class="menu-item <?php if(request()->is('data-science/forecasting')){echo 'active';} ?>">
+        <a href="{{ URL::to('/data-science/forecasting') }}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-trending-up text-warning"></i>
+            <div class="text-truncate">Peramalan Penjualan</div>
+        </a>
+    </li>
+    <li class="menu-item <?php if(request()->is('data-science/sentiment')){echo 'active';} ?>">
+        <a href="{{ URL::to('/data-science/sentiment') }}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-smile text-info"></i>
+            <div class="text-truncate">Sentimen Ulasan (NLP)</div>
+        </a>
+    </li>
+    <li class="menu-item <?php if(request()->is('data-science/recommender')){echo 'active';} ?>">
+        <a href="{{ URL::to('/data-science/recommender') }}" class="menu-link">
+            <i class="menu-icon tf-icons bx bx-bulb text-danger"></i>
+            <div class="text-truncate">Sistem Rekomendasi</div>
+        </a>
+    </li>
+
     @else
     <li
         class="menu-item <?php if($link == 'laporan-produk' or $link == 'add-laporan-produk' or $link == 'edit-laporan-produk'){echo 'active';} ?>">

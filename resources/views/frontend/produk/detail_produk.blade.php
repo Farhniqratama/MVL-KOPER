@@ -199,6 +199,50 @@
     </div>
     <!-- End .row -->
 
+    @if(isset($aiRecommendations) && $aiRecommendations->count() > 0)
+    <div class="products-section pt-3 mb-4" style="background: #f8f9fa; border-radius: 12px; padding: 20px;">
+        <div class="d-flex align-items-center justify-content-between mb-3">
+            <div>
+                <h3 class="section-title mb-1" style="font-size: 1.3rem; color: #222;">
+                    <i class="fa fa-magic text-primary mr-2"></i> Rekomendasi Cerdas Untuk Anda
+                </h3>
+                <p class="text-muted small mb-0">Dihitung otomatis menggunakan algoritma <strong>Item-Based Cosine Similarity & Machine Learning</strong></p>
+            </div>
+            <span class="badge badge-pill badge-primary px-3 py-2" style="background: #696cff; font-size: 0.85rem;">
+                <i class="fa fa-microchip mr-1"></i> AI Powered
+            </span>
+        </div>
+
+        <div class="row">
+            @foreach ($aiRecommendations as $valAi)
+            <div class="col-6 col-md-3 mb-3">
+                <div class="product-default text-center p-2 bg-white shadow-sm" style="border-radius: 8px; border: 1px solid #e2e8f0; height: 100%;">
+                    <figure style="margin-bottom: 8px;">
+                        <a href="{{ URL::to('produk-detail/'.$valAi->id) }}">
+                            <img src="{{ asset('upload/produk/'.$valAi->thumbnail_image) }}" style="max-height: 180px; object-fit: contain; width: 100%; border-radius: 6px;" alt="{{ $valAi->nama_produk }}">
+                        </a>
+                        <span class="badge badge-success position-absolute" style="top: 8px; right: 8px; background: #28c76f; font-size: 0.75rem;">
+                            {{ $valAi->similarity_score }}% Match
+                        </span>
+                    </figure>
+                    <div class="product-details p-0">
+                        <h4 class="product-title" style="font-size: 0.95rem; margin-bottom: 5px;">
+                            <a href="{{ URL::to('produk-detail/'.$valAi->id) }}">{{ $valAi->nama_produk }}</a>
+                        </h4>
+                        <div class="price-box mb-2">
+                            <span class="product-price text-primary font-weight-bold">Rp {{ number_format($valAi->harga, 0, ',', '.') }}</span>
+                        </div>
+                        <a href="{{ URL::to('produk-detail/'.$valAi->id) }}" class="btn btn-sm btn-outline-primary btn-block" style="border-radius: 6px;">
+                            <i class="fa fa-eye mr-1"></i> Lihat Detail
+                        </a>
+                    </div>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+    @endif
+
     <div class="products-section pt-0">
         <h2 class="section-title">Related Products</h2>
 

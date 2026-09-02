@@ -12,7 +12,7 @@
         <!-- User -->
         <li class="nav-item navbar-dropdown dropdown-user dropdown">
             <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                Hi {{ session('auth_user')['name'] }}<i class='bx bx-chevron-down me-2'></i>
+                Hi {{ session('auth_user')['name'] ?? session('auth_user')['nama'] ?? session('auth_user')['username'] ?? 'User' }}<i class='bx bx-chevron-down me-2'></i>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" style="min-width: auto;">
                 {{-- <li>
